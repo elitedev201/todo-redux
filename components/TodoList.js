@@ -10,10 +10,8 @@ const ListItemTodo = styled(ListItem)`
     border: 1px grey solid;
     border-radius: 5px;
     margin-bottom: 10px;
-    opacity: ${props => props.isChecked ? 0.3 : 1};
+    opacity: ${props => props.isChecked ? 0.4 : 1};
 `;
-
-
 
 const TodoList = (props) => {
     const [displayBtns, setdisplayBtns] = useState(false);

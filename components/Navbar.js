@@ -7,16 +7,17 @@ import Toolbar from "@material-ui/core/Toolbar";
 
 
 const Nav = styled(Toolbar)({
-  background: "white",
-  color: "black",
+  background: "black",
+  color: "white",
   display: "flex",
   justifyContent: "space-around",
   maxWidth: "100%",
 });
 
 const NavLink = styled(Link)({
-  color: "black",
+  color: "white",
   padding: "0 2.5rem",
+  fontFamily: "Aleo"
 });
 
 const Navbar = () => {
@@ -30,8 +31,8 @@ const Navbar = () => {
     <>
       <AppBar position="static" color="transparent">
         <Nav>
-          <NavLink href="#" underline="none" variant="h6">
-            Just A Another Todo App
+          <NavLink href="#" underline="none" variant="h5">
+            Just a another Todo app
           </NavLink>
         </Nav>
       </AppBar>

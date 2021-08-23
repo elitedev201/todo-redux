@@ -5,11 +5,10 @@ import CreateIcon from '@material-ui/icons/Create';
 import { useDispatch, useSelector } from "react-redux";
 import { deleteTodo, selectEditTodo } from "../redux/todo/todoActions"
 import styled from "styled-components"
-import { white } from 'ansi-colors';
 
 const TodoText = styled(ListItemText)`
 text-decoration: 
-    ${props => props.isChecked ? "line-through red 2px" : "none"};
+    ${props => props.ischecked ? "line-through red 2px" : "none"};
 `;
 
 const IconBtns = styled(IconButton)`
@@ -28,8 +27,8 @@ const TodoItem = (props) => {
     const dispatch = useDispatch();
 
     return (
-        <div>
-            <TodoText id={props.todo.id} primary={props.todo.value} isChecked={props.todo.completed}
+        <>
+            <TodoText id={props.todo.id} primary={props.todo.value} ischecked={props.todo.completed}
             />
             {props.displayBtns ?
                 <ListItemSecondaryAction >
@@ -48,7 +47,7 @@ const TodoItem = (props) => {
                     </IconBtns>
                 </ListItemSecondaryAction>
                 : null}
-        </div>
+        </>
     )
 }
 

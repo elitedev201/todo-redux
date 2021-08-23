@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
 import { Provider } from "react-redux";
 import { useStore } from "../redux/store"
+import Layout from '../components/Layout';
 export default function MyApp(props) {
   const { Component, pageProps } = props;
   const store = useStore(pageProps.initialReduxState)
@@ -28,7 +29,9 @@ export default function MyApp(props) {
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
-          <Component {...pageProps} />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
         </ThemeProvider>
       </Provider>
     </React.Fragment>

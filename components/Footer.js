@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import Link from 'next/link';
+import { Link } from '@material-ui/core';
+import * as React from "react";
+
 
 const FooterSection = styled.div`
   background: #000;
@@ -10,10 +12,16 @@ const FooterSection = styled.div`
   align-items: center;
 `;
 
+const FooterLink = styled(Link)({
+  color: "white",
+  fontFamily: "Aleo"
+});
+
+
 const Footer = () => {
   return (
     <FooterSection>
-      <p>Next 2021 All Rights Reserved</p>
+      <FooterLink href="#" underline="none" variant="caption" >Design and Built by Tenzin Tamdin 2021</FooterLink>
     </FooterSection>
   );
 };

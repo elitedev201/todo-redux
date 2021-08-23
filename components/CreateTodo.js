@@ -18,9 +18,11 @@ const CreateBtn = styled(Button)({
   border: "none",
   borderRadius: "20px",
   margin: " 0 1rem",
+  fontFamily: "Lato",
 });
 
 const Content = styled(CardContent)({
+  fontFamily: "Lato",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -46,7 +48,7 @@ const CreateTodo = (props) => {
         <Content>
           <Typography variant="h5">You lazy!</Typography>
           <Typography variant="body1">
-            Get you ass up, and add some task to your list:
+            Get started, and add some task to your list:
           </Typography>
           <br></br>
           <div>
