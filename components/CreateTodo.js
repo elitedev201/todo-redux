@@ -7,11 +7,10 @@ import {
   TextField,
 } from "@material-ui/core";
 import PlaylistAddIcon from "@material-ui/icons/PlaylistAdd";
-import AddIcon from "@material-ui/icons/Add";
-import CloseIcon from "@material-ui/icons/Close";
-import { styled } from "@material-ui/styles";
+import styled from "styled-components";
 import { useDispatch, } from "react-redux";
 import { addTodo } from "../redux/todo/todoActions"
+
 
 
 const CreateBtn = styled(Button)({
@@ -22,11 +21,21 @@ const CreateBtn = styled(Button)({
 });
 
 const Content = styled(CardContent)({
-  fontFamily: "Lato",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
+  textAlign: "center"
 });
+
+const StyledDiv = styled.div`
+  @media (max-width:430px) {
+    & > * {
+      margin-top: 0.5rem;
+    }
+  }
+ `;
+
+
 
 const apiKey = process.env.NEXT_PUBLIC_GIPHY_KEY;
 
@@ -51,7 +60,7 @@ const CreateTodo = (props) => {
             Get started, and add some task to your list:
           </Typography>
           <br></br>
-          <div>
+          <StyledDiv>
             <TextField
               variant="outlined"
               size="small"
@@ -69,7 +78,7 @@ const CreateTodo = (props) => {
             >
               ADD
             </CreateBtn>
-          </div>
+          </StyledDiv>
         </Content>
       </Card>
     </>

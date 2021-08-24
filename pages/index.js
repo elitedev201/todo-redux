@@ -4,7 +4,6 @@ import TodoList from '../components/TodoList';
 import styled from "styled-components";
 
 const CustomContainer = styled(Container)({
-  fontFamily: "Lato",
   height: "100vh",
   padding: "2rem",
 })
