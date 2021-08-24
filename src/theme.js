@@ -3,12 +3,8 @@ import { red } from '@material-ui/core/colors';
 
 // Create a theme instance.
 const theme = createTheme({
-  overrides: {
-    MuiTypography: {
-      root: {
-        fontFamily: "Lato",
-      }
-    }
+  typography: {
+    fontFamily: "Lato"
   },
   palette: {
     primary: {

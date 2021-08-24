@@ -17,7 +17,8 @@ const Nav = styled(Toolbar)({
 const NavLink = styled(Link)({
   color: "white",
   padding: "0 2.5rem",
-  fontFamily: "Aleo"
+  fontFamily: "Aleo",
+  textAlign: "center"
 });
 
 const Navbar = () => {

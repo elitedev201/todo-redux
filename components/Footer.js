@@ -14,7 +14,8 @@ const FooterSection = styled.div`
 
 const FooterLink = styled(Link)({
   color: "white",
-  fontFamily: "Aleo"
+  fontFamily: "Aleo",
+  textAlign: "center"
 });
 
 
