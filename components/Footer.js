@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { Link } from '@material-ui/core';
+import { Link, Typography } from '@material-ui/core';
 import * as React from "react";
+
 
 
 const FooterSection = styled.div`
@@ -13,16 +14,19 @@ const FooterSection = styled.div`
 `;
 
 const FooterLink = styled(Link)({
-  color: "white",
+  color: "#ffe66d",
   fontFamily: "Aleo",
-  textAlign: "center"
+  textAlign: "center",
+  textDecoration: "underline",
+  padding: "0.3em"
 });
 
 
 const Footer = () => {
   return (
     <FooterSection>
-      <FooterLink href="#" underline="none" variant="caption" >Design and Built by Tenzin Tamdin 2021</FooterLink>
+      <Typography variant="body2" >Made using Next + Redux - </Typography>
+      <FooterLink href="#" underline="none" variant="body2"> @tentamdin </FooterLink>
     </FooterSection>
   );
 };
