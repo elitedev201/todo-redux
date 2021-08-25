@@ -11,7 +11,7 @@ const EditBtns = styled(IconBtns)`
     opacity: 1;
 `;
 const CancelEditBtns = styled(DeleteIconBtns)`
-opacity:1;
+    opacity:1;
 `;
 
 const EditTodo = (props) => {
