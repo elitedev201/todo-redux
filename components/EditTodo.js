@@ -5,18 +5,14 @@ import DoneIcon from '@material-ui/icons/Done';
 import { useDispatch, } from "react-redux";
 import { cancelEditTodo, editTodo } from "../redux/todo/todoActions"
 import styled from "styled-components"
+import { IconBtns, DeleteIconBtns } from "./TodoItem"
 
-const IconBtns = styled(IconButton)`
-    background-color: ${props => props.bgColor || "darkgreen"};
-    border-radius: 5px;
-    padding: 8px;
-    margin-left: 10px;
-    &:hover {
-        opacity: 1;
-        background-color: ${props => props.bgColor || "darkgreen"};
-        transition: opacity 0.25s ease-in-out;
-    }
-`
+const EditBtns = styled(IconBtns)`
+    opacity: 1;
+`;
+const CancelEditBtns = styled(DeleteIconBtns)`
+opacity:1;
+`;
 
 const EditTodo = (props) => {
     const [itemValue, setItemValue] = useState(props.todo.value);
@@ -45,17 +41,18 @@ const EditTodo = (props) => {
                 id={props.todo.id}
                 value={itemValue}
                 onChange={handleItemChange}
+                autoFocus
             />
             <ListItemSecondaryAction>
-                <IconBtns edge="start" aria-label="comments"
+                <EditBtns edge="start" aria-label="comments"
                     onClick={handleEditAndResetForm}
                 >
                     <DoneIcon
                         style={{
                             color: "white",
                         }} />
-                </IconBtns>
-                <IconBtns edge="start" aria-label="comments"
+                </EditBtns>
+                <CancelEditBtns edge="start" aria-label="comments"
                     bgColor="red"
                     onClick={() => dispatch(cancelEditTodo())}
                 >
@@ -63,7 +60,7 @@ const EditTodo = (props) => {
                         style={{
                             color: "white",
                         }} />
-                </IconBtns>
+                </CancelEditBtns>
             </ListItemSecondaryAction>
         </>
     )

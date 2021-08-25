@@ -55,7 +55,7 @@ const CreateTodo = (props) => {
     <>
       <Card>
         <Content>
-          <Typography variant="h5">You lazy!</Typography>
+          <Typography variant="h5">Just do it!</Typography>
           <Typography variant="body1">
             Get started, and add some task to your list:
           </Typography>
