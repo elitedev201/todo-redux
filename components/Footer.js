@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <FooterSection>
       <Typography variant="body2" >Made using Next + Redux - </Typography>
-      <FooterLink href="#" underline="none" variant="body2"> @tentamdin </FooterLink>
+      <FooterLink href="https://github.com/tentamdin" target="_blank" underline="none" variant="body2"> @tentamdin </FooterLink>
     </FooterSection>
   );
 };
